@@ -1,0 +1,19 @@
+{
+  "name": "tz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "concurrently \"npm run install:back\" \"npm run install:front\"",
+    "dev": "concurrently \"npm run start:back\" \"npm run start:front\"",
+    "install:front": "cd client && npm i",
+    "install:back": "cd back && npm i",
+    "start:front": "cd client && npm run dev",
+    "start:back": "cd back && npm run start:dev"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "author": "Gulea",
+  "license": "ISC"
+}
